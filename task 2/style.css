@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Navigation using Flexbox */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    color:white;
+    padding:15px 30px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+}
+
+/* Grid Layout */
+
+.container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+#message{
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.todo-container{
+    display:flex;
+    gap:10px;
+}
+
+#taskList{
+    margin-top:20px;
+}
+
+#taskList li{
+    display:flex;
+    justify-content:space-between;
+    margin:10px 0;
+    background:#eee;
+    padding:10px;
+    border-radius:5px;
+}
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .todo-container{
+        flex-direction:column;
+    }
+}
